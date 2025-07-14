@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AmenityController;
 use App\Http\Controllers\Auth\SocialiteController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('amenities', AmenityController::class);
+    Route::resource('locations', LocationController::class);
 });
 
 Route::get('auth/google', [SocialiteController::class, 'redirectToGoogle'])->name('auth.google');

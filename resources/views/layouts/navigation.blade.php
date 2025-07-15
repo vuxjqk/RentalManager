@@ -28,6 +28,17 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <form class="mr-4" action="{{ route('change-language') }}" method="GET">
+                    <x-select name="locale" onchange="this.form.submit()">
+                        <option value="en" {{ session('locale', config('app.locale')) == 'en' ? 'selected' : '' }}>
+                            English
+                        </option>
+                        <option value="vi" {{ session('locale', config('app.locale')) == 'vi' ? 'selected' : '' }}>
+                            Tiếng Việt
+                        </option>
+                    </x-select>
+                </form>
+
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button

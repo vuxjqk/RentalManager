@@ -26,4 +26,9 @@ Route::middleware('auth')->group(function () {
 Route::get('auth/google', [SocialiteController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [SocialiteController::class, 'handleGoogleCallback']);
 
+Route::get('/change-language', function (Illuminate\Http\Request $request) {
+    session(['locale' => $request->input('locale', config('app.locale'))]);
+    return redirect()->back();
+})->name('change-language');
+
 require __DIR__ . '/auth.php';

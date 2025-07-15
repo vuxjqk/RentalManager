@@ -30,7 +30,7 @@
                         <div class="mt-4">
                             <x-input-label for="type" :value="__('Type')" />
                             <x-select id="type" class="block mt-1 w-full" name="type" required>
-                                <option value="">--- Type ---</option>
+                                <option value="">--- {{ __('Type') }} ---</option>
                                 @foreach ($types as $key => $label)
                                     <option value="{{ $key }}"
                                         {{ old('type') ?? $location->type == $key ? 'selected' : '' }}>
@@ -44,7 +44,7 @@
                         <div class="mt-4">
                             <x-input-label for="parent_id" :value="__('Parent')" />
                             <x-select id="parent_id" class="block mt-1 w-full" name="parent_id">
-                                <option value="">--- Parent ---</option>
+                                <option value="">--- {{ __('Parent') }} ---</option>
                                 @foreach ($parents as $parent)
                                     <option value="{{ $parent->id }}"
                                         {{ old('parent_id') ?? $location->parent_id == $parent->id ? 'selected' : '' }}>

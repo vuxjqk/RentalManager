@@ -25,10 +25,10 @@
                         <x-table>
                             <x-thead>
                                 <x-tr>
-                                    <x-th>Id</x-th>
-                                    <x-th>Name</x-th>
-                                    <x-th>Created at</x-th>
-                                    <x-th>Actions</x-th>
+                                    <x-th>{{ __('Id') }}</x-th>
+                                    <x-th>{{ __('Name') }}</x-th>
+                                    <x-th>{{ __('Created at') }}</x-th>
+                                    <x-th>{{ __('Actions') }}</x-th>
                                 </x-tr>
                             </x-thead>
                             <x-tbody>

@@ -15,29 +15,29 @@
                     <x-table>
                         <x-thead>
                             <x-tr>
-                                <x-th>Attribute</x-th>
-                                <x-th>Value</x-th>
+                                <x-th>{{ __('Attribute') }}</x-th>
+                                <x-th>{{ __('Value') }}</x-th>
                             </x-tr>
                         </x-thead>
                         <x-tbody>
                             <x-tr>
-                                <x-th>Id</x-th>
+                                <x-th>{{ __('Id') }}</x-th>
                                 <x-td>#{{ $amenity->id }}</x-td>
                             </x-tr>
                             <x-tr>
-                                <x-th>Name</x-th>
+                                <x-th>{{ __('Name') }}</x-th>
                                 <x-td>{{ $amenity->name }}</x-td>
                             </x-tr>
                             <x-tr>
-                                <x-th>Description</x-th>
+                                <x-th>{{ __('Description') }}</x-th>
                                 <x-td>{{ $amenity->description }}</x-td>
                             </x-tr>
                             <x-tr>
-                                <x-th>Created at</x-th>
+                                <x-th>{{ __('Created at') }}</x-th>
                                 <x-td>{{ $amenity->created_at }}</x-td>
                             </x-tr>
                             <x-tr>
-                                <x-th>Updated at</x-th>
+                                <x-th>{{ __('Updated at') }}</x-th>
                                 <x-td>{{ $amenity->updated_at }}</x-td>
                             </x-tr>
                         </x-tbody>
